@@ -1,0 +1,397 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poiret+One&display=swap");
+body {
+  background-color: #f1f1f1;
+  color: #4c4c4c; }
+  body h1, body .logo {
+    font-family: 'Poiret One', cursive;
+    font-size: 50px; }
+  body h2 {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0 0 70px;
+    font-size: 30px;
+    text-align: center; }
+  body .wrapper {
+    width: 100%;
+    font-family: "M PLUS Rounded 1c"; }
+    body .wrapper header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 1100px;
+      margin: 30px auto 0; }
+      body .wrapper header nav ul {
+        display: flex; }
+        body .wrapper header nav ul li {
+          font-size: 18px;
+          padding-right: 40px; }
+          body .wrapper header nav ul li a {
+            vertical-align: sub; }
+          body .wrapper header nav ul li:last-child {
+            padding-right: 0; }
+            body .wrapper header nav ul li:last-child img {
+              vertical-align: unset; }
+    body .wrapper main {
+      width: 1100px;
+      margin: 100px auto 150px; }
+      body .wrapper main .chronologyArea {
+        height: 325px; }
+        body .wrapper main .chronologyArea .innerBlock {
+          display: flex;
+          position: relative;
+          top: 95px;
+          align-items: center; }
+          body .wrapper main .chronologyArea .innerBlock.sp {
+            display: none; }
+          body .wrapper main .chronologyArea .innerBlock .phase {
+            position: relative;
+            width: 300px;
+            height: 10px;
+            background: #ddd; }
+            body .wrapper main .chronologyArea .innerBlock .phase:nth-child(1) {
+              background-color: #FFBA1A; }
+              body .wrapper main .chronologyArea .innerBlock .phase:nth-child(1) .date .circle {
+                background-color: #FFBA1A; }
+              body .wrapper main .chronologyArea .innerBlock .phase:nth-child(1) .date::before {
+                background-color: #FFBA1A; }
+            body .wrapper main .chronologyArea .innerBlock .phase:nth-child(2) {
+              background-color: #2B64DD; }
+              body .wrapper main .chronologyArea .innerBlock .phase:nth-child(2) .date .circle {
+                background-color: #2B64DD; }
+              body .wrapper main .chronologyArea .innerBlock .phase:nth-child(2) .date::before {
+                background-color: #2B64DD; }
+            body .wrapper main .chronologyArea .innerBlock .phase:nth-child(3) {
+              background-color: #C41D14; }
+              body .wrapper main .chronologyArea .innerBlock .phase:nth-child(3) .date .circle {
+                background-color: #C41D14; }
+              body .wrapper main .chronologyArea .innerBlock .phase:nth-child(3) .date::before {
+                background-color: #C41D14; }
+            body .wrapper main .chronologyArea .innerBlock .phase:nth-child(4) {
+              background-color: #3A3F4F; }
+              body .wrapper main .chronologyArea .innerBlock .phase:nth-child(4) .date .circle {
+                background-color: #3A3F4F; }
+              body .wrapper main .chronologyArea .innerBlock .phase:nth-child(4) .date::before {
+                background-color: #3A3F4F; }
+            body .wrapper main .chronologyArea .innerBlock .phase .date {
+              position: absolute;
+              top: -70px;
+              left: 65%;
+              width: 30px;
+              height: 30px; }
+              body .wrapper main .chronologyArea .innerBlock .phase .date .circle {
+                cursor: pointer;
+                position: absolute;
+                top: 0;
+                display: block;
+                background-color: #3A3F4F;
+                width: 30px;
+                height: 30px;
+                border-radius: 50px;
+                box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); }
+              body .wrapper main .chronologyArea .innerBlock .phase .date .year {
+                position: absolute;
+                top: -25px;
+                left: -17px;
+                width: 70px;
+                font-size: 14px;
+                font-weight: bold; }
+              body .wrapper main .chronologyArea .innerBlock .phase .date .balloon {
+                position: absolute;
+                top: -160px;
+                left: -15px;
+                background-color: #fff;
+                width: 220px;
+                height: 150px;
+                padding: 12px;
+                border-radius: 2px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+                z-index: 999; }
+                body .wrapper main .chronologyArea .innerBlock .phase .date .balloon .head .title {
+                  padding: 4px 4px 4px 8px;
+                  font-size: 12px;
+                  font-weight: bold;
+                  color: #000000;
+                  border-left: 5px solid #FFBA1A; }
+                body .wrapper main .chronologyArea .innerBlock .phase .date .balloon .content {
+                  margin-top: 10px;
+                  font-size: 12px;
+                  line-height: 1.5; }
+                body .wrapper main .chronologyArea .innerBlock .phase .date .balloon.active {
+                  display: block; }
+                body .wrapper main .chronologyArea .innerBlock .phase .date .balloon::before {
+                  content: "";
+                  display: block;
+                  background-color: #fff;
+                  width: 20px;
+                  height: 20px;
+                  position: absolute;
+                  left: 20px;
+                  bottom: -5px;
+                  transform: rotate(45deg); }
+              body .wrapper main .chronologyArea .innerBlock .phase .date::before {
+                content: "";
+                display: block;
+                position: relative;
+                top: 18px;
+                left: 12px;
+                width: 6px;
+                height: 60px; }
+              body .wrapper main .chronologyArea .innerBlock .phase .date:nth-child(odd) {
+                top: 60px;
+                left: 20%; }
+                body .wrapper main .chronologyArea .innerBlock .phase .date:nth-child(odd)::before {
+                  top: -53px; }
+                body .wrapper main .chronologyArea .innerBlock .phase .date:nth-child(odd) .year {
+                  top: 45px; }
+        body .wrapper main .chronologyArea + .profileArea {
+          margin-top: 100px; }
+      body .wrapper main .profileArea {
+        width: 100%; }
+        body .wrapper main .profileArea h2 {
+          display: none; }
+        body .wrapper main .profileArea .innerBlock {
+          display: flex;
+          height: 300px; }
+          body .wrapper main .profileArea .innerBlock .img {
+            position: relative;
+            width: 50%;
+            height: 100%; }
+            body .wrapper main .profileArea .innerBlock .img img {
+              position: absolute;
+              right: 0;
+              left: 0;
+              margin: auto;
+              width: 300px;
+              border-radius: 50%; }
+          body .wrapper main .profileArea .innerBlock .text {
+            width: 50%;
+            height: 192px;
+            margin: auto;
+            color: #4c4c4c;
+            font-size: 14px;
+            line-height: 1.8; }
+            body .wrapper main .profileArea .innerBlock .text ul {
+              position: relative;
+              background-color: #fff;
+              margin: auto;
+              padding: 20px;
+              border-left: 10px solid #3A3F4F; }
+              body .wrapper main .profileArea .innerBlock .text ul::after {
+                z-index: -1;
+                position: absolute;
+                content: "";
+                bottom: 15px;
+                right: 10px;
+                left: auto;
+                width: 50%;
+                top: 80%;
+                max-width: 300px;
+                box-shadow: 0 15px 10px rgba(0, 0, 0, 0.2);
+                transform: rotate(3deg); }
+              body .wrapper main .profileArea .innerBlock .text ul li {
+                list-style: none; }
+            body .wrapper main .profileArea .innerBlock .text .github {
+              margin: 20px 0 0;
+              text-align: right; }
+      body .wrapper main .worksArea {
+        width: 100%; }
+        body .wrapper main .worksArea .innerBlock ul {
+          display: flex;
+          flex-wrap: wrap; }
+          body .wrapper main .worksArea .innerBlock ul .item {
+            cursor: pointer;
+            background-color: #fff;
+            width: 320px;
+            height: 320px;
+            margin-right: 70px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 2px; }
+            body .wrapper main .worksArea .innerBlock ul .item:nth-child(n+4) {
+              margin-top: 70px; }
+            body .wrapper main .worksArea .innerBlock ul .item:nth-child(3n) {
+              margin-right: 0; }
+            body .wrapper main .worksArea .innerBlock ul .item .img img {
+              width: 100%;
+              height: 100%; }
+      body .wrapper main .aboutArea .innerBlock {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 100px;
+        font-size: 14px; }
+        body .wrapper main .aboutArea .innerBlock .history {
+          margin-bottom: 30px; }
+        body .wrapper main .aboutArea .innerBlock .skill ul:last-child {
+          margin-top: 26px; }
+        body .wrapper main .aboutArea .innerBlock .skill ul li.title {
+          margin: 0 0 10px;
+          font-weight: bold; }
+        body .wrapper main .aboutArea .innerBlock .skill ul li:nth-child(n+3) {
+          padding-top: 6px; }
+      body .wrapper main .attentionArea {
+        margin-top: 50px; }
+        body .wrapper main .attentionArea .innerBlock .title {
+          margin: 0 0 10px;
+          font-weight: bold; }
+        body .wrapper main .attentionArea .innerBlock .text, body .wrapper main .attentionArea .innerBlock .mail {
+          margin: 0;
+          font-size: 13px;
+          color: #4c4c4c; }
+        body .wrapper main .attentionArea .innerBlock .text {
+          margin-bottom: 6px; }
+    body .wrapper footer {
+      background-color: #3A3F4F;
+      font-size: 13px;
+      color: #fff; }
+      body .wrapper footer .innerBlock {
+        position: relative;
+        width: 1100px;
+        height: 300px;
+        margin: auto;
+        padding: 25px 0; }
+        body .wrapper footer .innerBlock .information .text {
+          margin-top: 12px; }
+        body .wrapper footer .innerBlock .information ul {
+          margin-top: 48px; }
+          body .wrapper footer .innerBlock .information ul li a {
+            text-decoration: underline; }
+          body .wrapper footer .innerBlock .information ul li:last-child {
+            margin-top: 10px; }
+        body .wrapper footer .innerBlock .information .copy {
+          position: absolute;
+          right: 0;
+          bottom: 25px;
+          color: #a5a5a5; }
+    body .wrapper .p-modal {
+      background-color: #fff;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      max-width: 800px;
+      width: 70%;
+      height: 80%;
+      margin: auto;
+      overflow-y: auto;
+      visibility: hidden;
+      z-index: 101; }
+      body .wrapper .p-modal.is-open {
+        visibility: visible; }
+      body .wrapper .p-modal .innerBlock .content {
+        padding: 30px; }
+        body .wrapper .p-modal .innerBlock .content .head {
+          display: flex;
+          justify-content: space-between; }
+          body .wrapper .p-modal .innerBlock .content .head .title {
+            font-size: 24px;
+            font-weight: bold; }
+        body .wrapper .p-modal .innerBlock .content .detail {
+          margin-top: 10px;
+          font-size: 14px; }
+          body .wrapper .p-modal .innerBlock .content .detail > span {
+            display: block; }
+            body .wrapper .p-modal .innerBlock .content .detail > span:nth-child(n+2) {
+              margin-top: 10px; }
+          body .wrapper .p-modal .innerBlock .content .detail .text {
+            line-height: 22px; }
+        body .wrapper .p-modal .innerBlock .content ul li {
+          margin: auto; }
+          body .wrapper .p-modal .innerBlock .content ul li .img {
+            display: block;
+            max-width: 500px;
+            width: 100%; }
+    body .wrapper .overlay {
+      background-color: #000;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      overflow-y: auto;
+      visibility: hidden;
+      opacity: 0;
+      z-index: -1; }
+      body .wrapper .overlay.is-open {
+        visibility: visible;
+        opacity: 0.5;
+        z-index: 100; }
+
+@media screen and (max-width: 1050px) {
+  body .wrapper header {
+    display: block;
+    width: 100%;
+    text-align: center; }
+    body .wrapper header nav {
+      width: fit-content;
+      margin: 30px auto 0; }
+  body .wrapper main {
+    width: 100%;
+    padding: 0 25px; }
+    body .wrapper main .chronologyArea {
+      height: auto; }
+      body .wrapper main .chronologyArea .innerBlock.pc {
+        display: none; }
+      body .wrapper main .chronologyArea .innerBlock.sp {
+        display: block;
+        top: 0; }
+        body .wrapper main .chronologyArea .innerBlock.sp .list ul li {
+          margin-top: 35px;
+          font-size: 13px; }
+          body .wrapper main .chronologyArea .innerBlock.sp .list ul li:first-child {
+            margin-top: 0; }
+          body .wrapper main .chronologyArea .innerBlock.sp .list ul li ul li {
+            margin-top: 0; }
+            body .wrapper main .chronologyArea .innerBlock.sp .list ul li ul li.title {
+              position: relative;
+              font-size: 14px;
+              font-weight: bold;
+              margin-bottom: 15px; }
+              body .wrapper main .chronologyArea .innerBlock.sp .list ul li ul li.title::before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 7px;
+                left: 49px;
+                background-color: #3A3F4F;
+                width: 85%;
+                height: 1px;
+                opacity: 0.4; }
+            body .wrapper main .chronologyArea .innerBlock.sp .list ul li ul li:nth-child(n+2) {
+              line-height: 1.6; }
+            body .wrapper main .chronologyArea .innerBlock.sp .list ul li ul li:nth-child(n+3) {
+              padding-top: 6px; }
+    body .wrapper main .profileArea .innerBlock {
+      display: block;
+      height: auto; }
+      body .wrapper main .profileArea .innerBlock .img {
+        width: 100%; }
+        body .wrapper main .profileArea .innerBlock .img img {
+          display: block;
+          position: relative; }
+      body .wrapper main .profileArea .innerBlock .text {
+        width: 100%;
+        height: auto;
+        margin-top: 30px; }
+    body .wrapper main .aboutArea .innerBlock {
+      display: block;
+      margin-top: 50px; }
+      body .wrapper main .aboutArea .innerBlock .skill ul li:nth-child(n+3) {
+        line-height: 1.6; }
+    body .wrapper main .worksArea .innerBlock ul .item {
+      width: 45%;
+      height: auto;
+      margin-top: 10%;
+      margin-right: 0; }
+      body .wrapper main .worksArea .innerBlock ul .item:nth-child(odd) {
+        margin-right: 10%; }
+      body .wrapper main .worksArea .innerBlock ul .item:nth-child(-n+2) {
+        margin-top: 0; }
+      body .wrapper main .worksArea .innerBlock ul .item:nth-child(n+4) {
+        margin-top: 10%; }
+  body .wrapper footer .innerBlock {
+    width: 100%;
+    padding: 25px; }
+    body .wrapper footer .innerBlock .information .copy {
+      right: auto; }
+  body .wrapper .p-modal {
+    width: 95%; } }
