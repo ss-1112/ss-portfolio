@@ -1,7 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poiret+One&display=swap");
+.vshow-enter-active,
+.vshow-leave-active {
+  transition: opacity .5s; }
+
+.vshow-enter,
+.vshow-leave-to {
+  opacity: 0; }
+
 body {
   background-color: #f1f1f1;
-  color: #4c4c4c; }
+  color: #4c4c4c;
+  -ms-overflow-style: none;
+  scrollbar-width: none; }
+  body::-webkit-scrollbar {
+    display: none; }
+  body.active {
+    overflow: hidden; }
   body h1, body .logo {
     font-family: 'Poiret One', cursive;
     font-size: 50px; }
@@ -23,11 +37,12 @@ body {
         display: flex; }
         body .wrapper header nav ul li {
           font-size: 18px;
-          padding-right: 40px; }
+          height: fit-content;
+          margin: auto 40px auto 0; }
           body .wrapper header nav ul li a {
-            vertical-align: sub; }
+            display: block; }
           body .wrapper header nav ul li:last-child {
-            padding-right: 0; }
+            margin-right: 0; }
             body .wrapper header nav ul li:last-child img {
               vertical-align: unset; }
     body .wrapper main {
@@ -86,7 +101,7 @@ body {
                 width: 30px;
                 height: 30px;
                 border-radius: 50px;
-                box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); }
+                box-shadow: 0 -6px 10px rgba(0, 0, 0, 0.2); }
               body .wrapper main .chronologyArea .innerBlock .phase .date .year {
                 position: absolute;
                 top: -25px;
@@ -138,6 +153,8 @@ body {
               body .wrapper main .chronologyArea .innerBlock .phase .date:nth-child(odd) {
                 top: 60px;
                 left: 20%; }
+                body .wrapper main .chronologyArea .innerBlock .phase .date:nth-child(odd) .circle {
+                  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); }
                 body .wrapper main .chronologyArea .innerBlock .phase .date:nth-child(odd)::before {
                   top: -53px; }
                 body .wrapper main .chronologyArea .innerBlock .phase .date:nth-child(odd) .year {
@@ -148,6 +165,14 @@ body {
         width: 100%; }
         body .wrapper main .profileArea h2 {
           display: none; }
+        body .wrapper main .profileArea.block h2 {
+          display: block; }
+        body .wrapper main .profileArea.block .innerBlock {
+          display: block; }
+          body .wrapper main .profileArea.block .innerBlock .img {
+            width: 100%; }
+          body .wrapper main .profileArea.block .innerBlock .text {
+            display: none; }
         body .wrapper main .profileArea .innerBlock {
           display: flex;
           height: 300px; }
@@ -159,12 +184,12 @@ body {
               position: absolute;
               right: 0;
               left: 0;
+              max-width: 300px;
+              width: 100%;
               margin: auto;
-              width: 300px;
               border-radius: 50%; }
           body .wrapper main .profileArea .innerBlock .text {
             width: 50%;
-            height: 192px;
             margin: auto;
             color: #4c4c4c;
             font-size: 14px;
@@ -203,7 +228,6 @@ body {
             width: 320px;
             height: 320px;
             margin-right: 70px;
-            padding: 20px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
             border-radius: 2px; }
             body .wrapper main .worksArea .innerBlock ul .item:nth-child(n+4) {
@@ -219,7 +243,8 @@ body {
         margin-top: 100px;
         font-size: 14px; }
         body .wrapper main .aboutArea .innerBlock .history {
-          margin-bottom: 30px; }
+          margin-bottom: 30px;
+          line-height: 1.9; }
         body .wrapper main .aboutArea .innerBlock .skill ul:last-child {
           margin-top: 26px; }
         body .wrapper main .aboutArea .innerBlock .skill ul li.title {
@@ -262,31 +287,49 @@ body {
           bottom: 25px;
           color: #a5a5a5; }
     body .wrapper .p-modal {
-      background-color: #fff;
       position: fixed;
+      background-color: #fff;
       top: 0;
       right: 0;
       bottom: 0;
       left: 0;
-      max-width: 800px;
-      width: 70%;
-      height: 80%;
+      max-width: 1000px;
+      width: 80%;
+      height: 90%;
       margin: auto;
       overflow-y: auto;
-      visibility: hidden;
       z-index: 101; }
-      body .wrapper .p-modal.is-open {
-        visibility: visible; }
       body .wrapper .p-modal .innerBlock .content {
-        padding: 30px; }
+        width: 70%;
+        margin: auto;
+        padding: 50px; }
         body .wrapper .p-modal .innerBlock .content .head {
           display: flex;
           justify-content: space-between; }
           body .wrapper .p-modal .innerBlock .content .head .title {
+            height: fit-content;
+            margin: auto 0;
+            padding-right: 30px;
             font-size: 24px;
-            font-weight: bold; }
+            font-weight: bold;
+            line-height: 1.4; }
+          body .wrapper .p-modal .innerBlock .content .head .close {
+            cursor: pointer;
+            position: relative;
+            width: 33px;
+            height: 33px; }
+            body .wrapper .p-modal .innerBlock .content .head .close::before, body .wrapper .p-modal .innerBlock .content .head .close::after {
+              content: "";
+              position: absolute;
+              top: 16px;
+              background-color: #3A3F4F;
+              width: 100%;
+              height: 1px;
+              transform: rotate(45deg); }
+            body .wrapper .p-modal .innerBlock .content .head .close::after {
+              transform: rotate(-45deg); }
         body .wrapper .p-modal .innerBlock .content .detail {
-          margin-top: 10px;
+          margin-top: 5px;
           font-size: 14px; }
           body .wrapper .p-modal .innerBlock .content .detail > span {
             display: block; }
@@ -295,26 +338,57 @@ body {
           body .wrapper .p-modal .innerBlock .content .detail .text {
             line-height: 22px; }
         body .wrapper .p-modal .innerBlock .content ul li {
-          margin: auto; }
+          position: relative;
+          background-color: #f1f1f1;
+          margin: 50px auto 0;
+          padding: 35px 6px 6px;
+          border-radius: 5px; }
+          body .wrapper .p-modal .innerBlock .content ul li:nth-last-child(-n+2) {
+            width: 48%;
+            margin: 0;
+            margin-top: 50px; }
+          body .wrapper .p-modal .innerBlock .content ul li:last-child {
+            margin-left: 4%; }
+          body .wrapper .p-modal .innerBlock .content ul li .dots {
+            position: absolute;
+            top: 12px;
+            right: 32px;
+            background-color: #FFBA1A;
+            width: 12px;
+            height: 12px;
+            border-radius: 12px;
+            opacity: 0.7; }
+            body .wrapper .p-modal .innerBlock .content ul li .dots::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              right: 20px;
+              background-color: #C41D14;
+              width: 12px;
+              height: 12px;
+              border-radius: 12px; }
+            body .wrapper .p-modal .innerBlock .content ul li .dots::after {
+              content: "";
+              position: absolute;
+              top: 0;
+              right: -20px;
+              background-color: #2B64DD;
+              width: 12px;
+              height: 12px;
+              border-radius: 12px; }
           body .wrapper .p-modal .innerBlock .content ul li .img {
             display: block;
-            max-width: 500px;
-            width: 100%; }
+            width: 100%;
+            border-radius: 5px; }
     body .wrapper .overlay {
-      background-color: #000;
       position: fixed;
+      background-color: rgba(0, 0, 0, 0.2);
       top: 0;
       right: 0;
       bottom: 0;
       left: 0;
       overflow-y: auto;
-      visibility: hidden;
-      opacity: 0;
-      z-index: -1; }
-      body .wrapper .overlay.is-open {
-        visibility: visible;
-        opacity: 0.5;
-        z-index: 100; }
+      z-index: 100; }
 
 @media screen and (max-width: 1050px) {
   body .wrapper header {
@@ -326,7 +400,8 @@ body {
       margin: 30px auto 0; }
   body .wrapper main {
     width: 100%;
-    padding: 0 25px; }
+    padding: 0 25px;
+    margin-top: 30px; }
     body .wrapper main .chronologyArea {
       height: auto; }
       body .wrapper main .chronologyArea .innerBlock.pc {
@@ -371,10 +446,12 @@ body {
       body .wrapper main .profileArea .innerBlock .text {
         width: 100%;
         height: auto;
-        margin-top: 30px; }
+        margin-top: 30px;
+        font-size: 13px; }
     body .wrapper main .aboutArea .innerBlock {
       display: block;
-      margin-top: 50px; }
+      margin-top: 50px;
+      font-size: 13px; }
       body .wrapper main .aboutArea .innerBlock .skill ul li:nth-child(n+3) {
         line-height: 1.6; }
     body .wrapper main .worksArea .innerBlock ul .item {
@@ -394,4 +471,34 @@ body {
     body .wrapper footer .innerBlock .information .copy {
       right: auto; }
   body .wrapper .p-modal {
-    width: 95%; } }
+    width: 95%; }
+    body .wrapper .p-modal .innerBlock .content {
+      width: 90%;
+      padding: 25px 10px; }
+      body .wrapper .p-modal .innerBlock .content .head .close {
+        position: fixed;
+        top: 6%;
+        right: 4%;
+        z-index: 999; }
+      body .wrapper .p-modal .innerBlock .content ul li {
+        margin-top: 30px; }
+        body .wrapper .p-modal .innerBlock .content ul li:nth-last-child(-n+2) {
+          width: 100%;
+          margin: 0;
+          margin-top: 30px; } }
+
+@media screen and (max-width: 500px) {
+  body .wrapper main .worksArea .innerBlock ul .item {
+    width: 100%; }
+    body .wrapper main .worksArea .innerBlock ul .item:nth-child(odd) {
+      margin-right: 0; }
+    body .wrapper main .worksArea .innerBlock ul .item:nth-child(-n+2) {
+      margin-top: 10%; }
+    body .wrapper main .worksArea .innerBlock ul .item:first-child {
+      margin-top: 0; }
+  body .wrapper .p-modal .innerBlock .content .head {
+    position: relative; }
+    body .wrapper .p-modal .innerBlock .content .head .title {
+      font-size: 13px; }
+  body .wrapper .p-modal .innerBlock .content .detail {
+    font-size: 12px; } }

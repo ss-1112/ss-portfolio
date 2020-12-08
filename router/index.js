@@ -9,7 +9,7 @@ Vue.use(VueRouter)
 const routes = [
     { path: '/', component: Home },
     { path: '/about', component: About },
-    { path: '/Works', component: Collection }
+    { path: '/Works', component: Collection },
 ]
 
 const router = new VueRouter({

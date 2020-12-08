@@ -2,7 +2,7 @@
 export default {
     methods: {
         macthParam() {
-            this.element = document.querySelector('.profileArea h2').style.display = "block";
+            document.querySelector('.profileArea').classList.add('block')
         }
     }
 }
