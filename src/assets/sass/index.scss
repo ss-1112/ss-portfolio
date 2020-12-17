@@ -87,48 +87,37 @@ body {
                         position: relative;
                         width: 300px;
                         height: 10px;
-                        background: #ddd;
-                        &:nth-child(1) {
-                            background-color: #FFBA1A;
-                            .date {
-                                .circle {
-                                    background-color: #FFBA1A;
-                                }
-                                &::before {
-                                    background-color: #FFBA1A;
-                                }
-                            }
-                        }
-                        &:nth-child(2) {
-                            background-color: #2B64DD;
-                            .date {
-                                .circle {
-                                    background-color: #2B64DD;
-                                }
-                                &::before {
-                                    background-color: #2B64DD;
-                                }
-                            }
-                        }
-                        &:nth-child(3) {
-                            background-color: #C41D14;
-                            .date {
-                                .circle {
-                                    background-color: #C41D14;
-                                }
-                                &::before {
-                                    background-color: #C41D14;
+                        $phase-color: #FFBA1A, #2B64DD, #C41D14, #3A3F4F;
+                        @each $color in $phase-color {
+                            $i: index($phase-color, $color);
+                            &:nth-child(#{$i}) {
+                                background-color: $color;
+                                .date {
+                                    .circle {
+                                        background-color: $color;
+                                    }
+                                    &::before {
+                                        background-color: $color;
+                                    }
+                                    .balloon {
+                                        .head {
+                                            .title {
+                                                border-left: 5px solid $color;
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
-                        &:nth-child(4) {
-                            background-color: #3A3F4F;
+                        &:last-child {
                             .date {
-                                .circle {
-                                    background-color: #3A3F4F;
-                                }
-                                &::before {
-                                    background-color: #3A3F4F;
+                                .balloon {
+                                    right: -15px;
+                                    left: auto;
+                                    &::before {
+                                        right: 20px;
+                                        left: auto;
+                                    }
                                 }
                             }
                         }
@@ -143,7 +132,6 @@ body {
                                 position: absolute;
                                 top: 0;
                                 display: block;
-                                background-color: #3A3F4F;
                                 width: 30px;
                                 height: 30px;
                                 border-radius: 50px;
@@ -173,8 +161,7 @@ body {
                                         padding: 4px 4px 4px 8px;
                                         font-size: 12px;
                                         font-weight: bold;
-                                        color: #000000;
-                                        border-left: 5px solid #FFBA1A;
+                                        color: #4c4c4c;
                                     }
                                 }
                                 .content {
@@ -433,7 +420,7 @@ body {
                             height: fit-content;
                             margin: auto 0;
                             padding-right: 30px;
-                            font-size: 24px;
+                            font-size: 20px;
                             font-weight: bold;
                             line-height: 1.4;
                         }

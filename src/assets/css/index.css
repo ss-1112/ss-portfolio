@@ -60,32 +60,45 @@ body {
           body .wrapper main .chronologyArea .innerBlock .phase {
             position: relative;
             width: 300px;
-            height: 10px;
-            background: #ddd; }
+            height: 10px; }
             body .wrapper main .chronologyArea .innerBlock .phase:nth-child(1) {
               background-color: #FFBA1A; }
               body .wrapper main .chronologyArea .innerBlock .phase:nth-child(1) .date .circle {
                 background-color: #FFBA1A; }
               body .wrapper main .chronologyArea .innerBlock .phase:nth-child(1) .date::before {
                 background-color: #FFBA1A; }
+              body .wrapper main .chronologyArea .innerBlock .phase:nth-child(1) .date .balloon .head .title {
+                border-left: 5px solid #FFBA1A; }
             body .wrapper main .chronologyArea .innerBlock .phase:nth-child(2) {
               background-color: #2B64DD; }
               body .wrapper main .chronologyArea .innerBlock .phase:nth-child(2) .date .circle {
                 background-color: #2B64DD; }
               body .wrapper main .chronologyArea .innerBlock .phase:nth-child(2) .date::before {
                 background-color: #2B64DD; }
+              body .wrapper main .chronologyArea .innerBlock .phase:nth-child(2) .date .balloon .head .title {
+                border-left: 5px solid #2B64DD; }
             body .wrapper main .chronologyArea .innerBlock .phase:nth-child(3) {
               background-color: #C41D14; }
               body .wrapper main .chronologyArea .innerBlock .phase:nth-child(3) .date .circle {
                 background-color: #C41D14; }
               body .wrapper main .chronologyArea .innerBlock .phase:nth-child(3) .date::before {
                 background-color: #C41D14; }
+              body .wrapper main .chronologyArea .innerBlock .phase:nth-child(3) .date .balloon .head .title {
+                border-left: 5px solid #C41D14; }
             body .wrapper main .chronologyArea .innerBlock .phase:nth-child(4) {
               background-color: #3A3F4F; }
               body .wrapper main .chronologyArea .innerBlock .phase:nth-child(4) .date .circle {
                 background-color: #3A3F4F; }
               body .wrapper main .chronologyArea .innerBlock .phase:nth-child(4) .date::before {
                 background-color: #3A3F4F; }
+              body .wrapper main .chronologyArea .innerBlock .phase:nth-child(4) .date .balloon .head .title {
+                border-left: 5px solid #3A3F4F; }
+            body .wrapper main .chronologyArea .innerBlock .phase:last-child .date .balloon {
+              right: -15px;
+              left: auto; }
+              body .wrapper main .chronologyArea .innerBlock .phase:last-child .date .balloon::before {
+                right: 20px;
+                left: auto; }
             body .wrapper main .chronologyArea .innerBlock .phase .date {
               position: absolute;
               top: -70px;
@@ -97,7 +110,6 @@ body {
                 position: absolute;
                 top: 0;
                 display: block;
-                background-color: #3A3F4F;
                 width: 30px;
                 height: 30px;
                 border-radius: 50px;
@@ -124,8 +136,7 @@ body {
                   padding: 4px 4px 4px 8px;
                   font-size: 12px;
                   font-weight: bold;
-                  color: #000000;
-                  border-left: 5px solid #FFBA1A; }
+                  color: #4c4c4c; }
                 body .wrapper main .chronologyArea .innerBlock .phase .date .balloon .content {
                   margin-top: 10px;
                   font-size: 12px;
@@ -310,7 +321,7 @@ body {
             height: fit-content;
             margin: auto 0;
             padding-right: 30px;
-            font-size: 24px;
+            font-size: 20px;
             font-weight: bold;
             line-height: 1.4; }
           body .wrapper .p-modal .innerBlock .content .head .close {
