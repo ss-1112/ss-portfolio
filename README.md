@@ -11,9 +11,10 @@
 - JavaScript
 - PHP etc ...
 
-### フレームワーク
+### フレームワーク・CMS
 - Vue.js
 - CakePHP2
+- WordPress
 
 ### その他
 - Backlog
