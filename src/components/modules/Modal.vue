@@ -113,12 +113,20 @@
                     tools: 'Webサイトデザイン・HTML/CSS/JS コーディング・レスポンシブ・Vue.js',
                     images: [
                         {
-                            path: '/src/assets/images/work_1_1.png',
-                            alt: 'Tシャツの画像'
+                            path: '/src/assets/images/work_5_2.png',
+                            alt: 'トップページ'
                         },
                         {
-                            path: '/src/assets/images/work_1_2.png',
-                            alt: 'Tシャツのデザイン'
+                            path: '/src/assets/images/work_5_3.png',
+                            alt: 'Aboutページ'
+                        },
+                        {
+                            path: '/src/assets/images/work_5_4.png',
+                            alt: 'トップページのスマートフォン画面'
+                        },
+                        {
+                            path: '/src/assets/images/work_5_5.png',
+                            alt: 'Worksページのスマートフォン画面'
                         }
                     ]
                 }]
