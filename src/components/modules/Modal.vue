@@ -150,7 +150,7 @@
 <template>
     <div>
         <transition name="vshow">
-        <div class="p-modal" v-show="isModalActive">
+        <div class="modal" v-show="isModalActive">
             <div class="innerBlock">
                 <div class="content">
                     <p class="head">

@@ -299,7 +299,7 @@ body {
           right: 0;
           bottom: 25px;
           color: #a5a5a5; }
-    body .wrapper .p-modal {
+    body .wrapper .modal {
       position: fixed;
       background-color: #fff;
       top: 0;
@@ -312,26 +312,26 @@ body {
       margin: auto;
       overflow-y: auto;
       z-index: 101; }
-      body .wrapper .p-modal .innerBlock .content {
+      body .wrapper .modal .innerBlock .content {
         width: 70%;
         margin: auto;
         padding: 50px; }
-        body .wrapper .p-modal .innerBlock .content .head {
+        body .wrapper .modal .innerBlock .content .head {
           display: flex;
           justify-content: space-between; }
-          body .wrapper .p-modal .innerBlock .content .head .title {
+          body .wrapper .modal .innerBlock .content .head .title {
             height: fit-content;
             margin: auto 0;
             padding-right: 30px;
             font-size: 20px;
             font-weight: bold;
             line-height: 1.4; }
-          body .wrapper .p-modal .innerBlock .content .head .close {
+          body .wrapper .modal .innerBlock .content .head .close {
             cursor: pointer;
             position: relative;
             width: 33px;
             height: 33px; }
-            body .wrapper .p-modal .innerBlock .content .head .close::before, body .wrapper .p-modal .innerBlock .content .head .close::after {
+            body .wrapper .modal .innerBlock .content .head .close::before, body .wrapper .modal .innerBlock .content .head .close::after {
               content: "";
               position: absolute;
               top: 16px;
@@ -339,30 +339,30 @@ body {
               width: 100%;
               height: 1px;
               transform: rotate(45deg); }
-            body .wrapper .p-modal .innerBlock .content .head .close::after {
+            body .wrapper .modal .innerBlock .content .head .close::after {
               transform: rotate(-45deg); }
-        body .wrapper .p-modal .innerBlock .content .detail {
+        body .wrapper .modal .innerBlock .content .detail {
           margin-top: 5px;
           font-size: 14px; }
-          body .wrapper .p-modal .innerBlock .content .detail > span {
+          body .wrapper .modal .innerBlock .content .detail > span {
             display: block; }
-            body .wrapper .p-modal .innerBlock .content .detail > span:nth-child(n+2) {
+            body .wrapper .modal .innerBlock .content .detail > span:nth-child(n+2) {
               margin-top: 10px; }
-          body .wrapper .p-modal .innerBlock .content .detail .text {
+          body .wrapper .modal .innerBlock .content .detail .text {
             line-height: 22px; }
-        body .wrapper .p-modal .innerBlock .content ul li {
+        body .wrapper .modal .innerBlock .content ul li {
           position: relative;
           background-color: #ececec;
           margin: 50px auto 0;
           padding: 35px 6px 6px;
           border-radius: 5px; }
-          body .wrapper .p-modal .innerBlock .content ul li:nth-last-child(-n+2) {
+          body .wrapper .modal .innerBlock .content ul li:nth-last-child(-n+2) {
             width: 48%;
             margin: 0;
             margin-top: 50px; }
-          body .wrapper .p-modal .innerBlock .content ul li:last-child {
+          body .wrapper .modal .innerBlock .content ul li:last-child {
             margin-left: 4%; }
-          body .wrapper .p-modal .innerBlock .content ul li .dots {
+          body .wrapper .modal .innerBlock .content ul li .dots {
             position: absolute;
             top: 12px;
             right: 32px;
@@ -371,7 +371,7 @@ body {
             height: 12px;
             border-radius: 12px;
             opacity: 0.7; }
-            body .wrapper .p-modal .innerBlock .content ul li .dots::before {
+            body .wrapper .modal .innerBlock .content ul li .dots::before {
               content: "";
               position: absolute;
               top: 0;
@@ -380,7 +380,7 @@ body {
               width: 12px;
               height: 12px;
               border-radius: 12px; }
-            body .wrapper .p-modal .innerBlock .content ul li .dots::after {
+            body .wrapper .modal .innerBlock .content ul li .dots::after {
               content: "";
               position: absolute;
               top: 0;
@@ -389,7 +389,7 @@ body {
               width: 12px;
               height: 12px;
               border-radius: 12px; }
-          body .wrapper .p-modal .innerBlock .content ul li .img {
+          body .wrapper .modal .innerBlock .content ul li .img {
             display: block;
             width: 100%;
             border-radius: 5px; }
@@ -483,19 +483,19 @@ body {
     padding: 25px; }
     body .wrapper footer .innerBlock .information .copy {
       right: auto; }
-  body .wrapper .p-modal {
+  body .wrapper .modal {
     width: 95%; }
-    body .wrapper .p-modal .innerBlock .content {
+    body .wrapper .modal .innerBlock .content {
       width: 90%;
       padding: 25px 10px; }
-      body .wrapper .p-modal .innerBlock .content .head .close {
+      body .wrapper .modal .innerBlock .content .head .close {
         position: fixed;
         top: 6%;
         right: 4%;
         z-index: 999; }
-      body .wrapper .p-modal .innerBlock .content ul li {
+      body .wrapper .modal .innerBlock .content ul li {
         margin-top: 30px; }
-        body .wrapper .p-modal .innerBlock .content ul li:nth-last-child(-n+2) {
+        body .wrapper .modal .innerBlock .content ul li:nth-last-child(-n+2) {
           width: 100%;
           margin: 0;
           margin-top: 30px; } }
@@ -509,9 +509,9 @@ body {
       margin-top: 10%; }
     body .wrapper main .worksArea .innerBlock ul .item:first-child {
       margin-top: 0; }
-  body .wrapper .p-modal .innerBlock .content .head {
+  body .wrapper .modal .innerBlock .content .head {
     position: relative; }
-    body .wrapper .p-modal .innerBlock .content .head .title {
+    body .wrapper .modal .innerBlock .content .head .title {
       font-size: 13px; }
-  body .wrapper .p-modal .innerBlock .content .detail {
+  body .wrapper .modal .innerBlock .content .detail {
     font-size: 12px; } }

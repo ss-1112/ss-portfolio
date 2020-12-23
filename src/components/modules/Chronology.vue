@@ -120,7 +120,7 @@
                 </div>
                 <div class="date">
                     <span class="circle" v-on:mouseover="mouseOverAction(1008)" v-on:mouseleave="mouseLeaveAction"></span>
-                    <p class="year">2020/10 -</p>
+                    <p class="year">2020/12 -</p>
                     <div class="balloon" v-if="isActive === 1008 || false">
                         <div class="head">
                             <p class="title">現在</p>
